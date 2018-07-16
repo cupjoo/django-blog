@@ -25,6 +25,7 @@
       <list>
         <option value="$MODULE_DIR$/templates" />
         <option value="$MODULE_DIR$/bookmark/templates" />
+        <option value="$MODULE_DIR$/blog/templates" />
       </list>
     </option>
   </component>
