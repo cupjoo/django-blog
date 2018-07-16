@@ -18,3 +18,10 @@ class PostDV(DetailView):
 class PostAV(ArchiveIndexView):
     model = Post
     date_field = 'modify_date'
+
+
+class PostYAV(YearArchiveView):
+    model = Post
+    date_field = 'modify_date'
+    make_object_list = True
+
