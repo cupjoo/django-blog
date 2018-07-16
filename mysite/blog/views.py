@@ -29,3 +29,8 @@ class PostYAV(YearArchiveView):
 class PostMAV(MonthArchiveView):
     model = Post
     date_field = 'modify_date'
+
+
+class PostDAV(DayArchiveView):
+    model = Post
+    date_field = 'modify_date'
