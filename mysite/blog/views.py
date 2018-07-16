@@ -13,3 +13,8 @@ class PostLV(ListView):
 
 class PostDV(DetailView):
     model = Post
+
+
+class PostAV(ArchiveIndexView):
+    model = Post
+    date_field = 'modify_date'
