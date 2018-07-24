@@ -26,6 +26,5 @@ urlpatterns = [
          UserCreateDoneTV.as_view(), name='register_done'),
 
     path('admin/', admin.site.urls),
-    path('bookmark/', include('bookmark.urls')),
     path('blog/', include('blog.urls')),
 ]
