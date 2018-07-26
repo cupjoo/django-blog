@@ -3,10 +3,10 @@
 {% block title %}post_all.html{% endblock %}
 
 {% block content %}
-    <div id=""content>
+    <div id="content">
         <h1>Blog List</h1>
         {% for post in posts %}
-            <h2><a href="{% url 'blog:post_detail' post.slug %}">{{ post.title }}</a></h2>
+            <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
             {{ post.modify_date|date:"N d, Y" }}
             <p>{{ post.description }}</p>
         {% endfor %}
@@ -15,6 +15,7 @@
 
         <div>
             <span>
+                <!-- page_obj: 장고의 Page 객체가 들어 있는 context 변수 by ListView-->
                 {% if page_obj.has_previous %}
                     <a href="?page={{ page_obj.previous_page_number }}">Previous Page</a>
                 {% endif %}
