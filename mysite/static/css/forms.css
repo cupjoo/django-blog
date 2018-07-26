@@ -37,5 +37,6 @@ fieldset {
 
 .submit-row input {
     margin: 10px;
-    background: #ffc;
+    padding: 5px;
+    background: white;
 }
