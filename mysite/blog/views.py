@@ -69,7 +69,7 @@ class SearchFormView(FormView):
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['title', 'slug', 'description', 'content', 'tag']
+    fields = ['title', 'slug', 'description', 'content']
     initial = {'slug': 'auto-filling-do-not-input'}
     success_url = reverse_lazy('blog:index')
 
@@ -87,7 +87,7 @@ class PostChangeLV(LoginRequiredMixin, ListView):
 
 class PostUpdateView(LoginRequiredMixin, UpdateView) :
     model = Post
-    fields = ['title', 'slug', 'description', 'content', 'tag']
+    fields = ['title', 'slug', 'description', 'content']
     success_url = reverse_lazy('blog:index')
 
 
